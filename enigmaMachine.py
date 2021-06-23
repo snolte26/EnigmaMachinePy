@@ -38,22 +38,21 @@ def machine():
     rotorList = [rotor1, rotor2, rotor3, rotor4, rotor5]
     reflectorList = [reflector1, reflector2, reflector3]
 
+    # CREATING FILE TO SAVE SETTINGS
+    settings = open("emSettings.txt", "w+")
+
     # CHOOSING WHICH ROTORS, REFLECTOR, AND ROTOR STARTING POSITION TO USE
     while True:
         rotorChoice1 = int(input("First rotor, 1-5: ")) - 1
-        rotorChoice1 = rotorList[rotorChoice1]
         rotorSetting1 = int(input("Enter position of rotor 1, 1-26: "))
         os.system('cls')
         rotorChoice2 = int(input("Second rotor, 1-5: ")) - 1
-        rotorChoice2 = rotorList[rotorChoice2]
         rotorSetting2 = int(input("Enter position of rotor 2, 1-26: "))
         os.system('cls')
         rotorChoice3 = int(input("Third rotor, 1-5: ")) - 1
-        rotorChoice3 = rotorList[rotorChoice3]
         rotorSetting3 = int(input("Enter position of rotor 3, 1-26: "))
         os.system('cls')
         reflector = int(input("Which reflector, 1-3: ")) - 1
-        reflector = reflectorList[reflector]
         os.system('cls')
 
         # CHECKING IF EACH ROTOR IS UNIQUE
@@ -61,6 +60,15 @@ def machine():
             print("Each rotor must be unique")
             continue
         else:
+            # WRITE ROTOR AND REFLECTOR SETTINGS TO THE FILE
+            settings.writelines("Rotors: " + (str(rotorChoice1 + 1) + " - " + str(rotorSetting1)) + ", " + (str(rotorChoice2+ 1) + "- " + str(rotorSetting2)) + ", " + (str(rotorChoice3 + 1) + " - " + str(rotorSetting3)) + "\n")
+            settings.writelines("Reflector: " + str(reflector + 1) + "\n")
+
+            # SETTING THE ROTOR CHOICES
+            rotorChoice1 = rotorList[rotorChoice1]
+            rotorChoice2 = rotorList[rotorChoice2]
+            rotorChoice3 = rotorList[rotorChoice3]
+            reflector = reflectorList[reflector]
             break
 
     # SETS THE ROTOR STARTING POSITIONS
@@ -101,6 +109,10 @@ def machine():
                 break
             else:
                 continue
+    
+    # WRITE THE PLUG BOARD TO THE FILE AND CLOSE THE FILE
+    settings.writelines("Plug Board: " + str(plugList))
+    settings.close()
 
     # GETS MESSAGE TO ENCODE, CAPITALIZES, AND REMOVES SPACES
     message = input("Message to Process: ")
