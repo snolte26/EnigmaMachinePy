@@ -10,6 +10,7 @@ The enigmaMachine.py has multiple possible combinations of settings for writing 
 The resulting amount of possible settings combinations calculates out to 476,887,665,653,479,080,000, or about 477 Quintillion
 
 Math:
+
 `
 (5 * 4 * 3) (26^3) (3) = 3,163,680 possible rotor/reflector combinations
 (26!) / (6! * 10! * 2^10) = 150,738,274,937,250 possible plugboard combinations
