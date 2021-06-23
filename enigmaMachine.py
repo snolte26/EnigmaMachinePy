@@ -121,7 +121,7 @@ def machine():
     messageList = list(message)
 
     for item in messageList:
-        if " " == item:
+        if item not in rotorBase:
             messageList.remove(item)
 
     encodedList = []
