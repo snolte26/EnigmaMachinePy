@@ -26,4 +26,4 @@ When setting the rotors and plug board, all settings are hidden so that no one c
 
 Download the dist folder to begin using the machine
 
-NOTE: YOU MUST WRITE DOWN YOUR SETTINGS IN ORDER FOR A MESSAGE TO BE DECRYPTED LATER. THERE IS CURRENTLY NO WAY TO SAVE/VIEW YOUR SETTINGS!!!
+The Enigma Machine now writes your settings to a file that can be called later. Users no longer have to write down their settings manually.
