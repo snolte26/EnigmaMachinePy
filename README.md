@@ -12,13 +12,13 @@ The resulting amount of possible settings combinations calculates out to 476,887
 
 Math:
 
-`
+
 (5 * 4 * 3) (26^3) (3) = 3,163,680 possible rotor/reflector combinations
 
 (26!) / (6! * 10! * 2^10) = 150,738,274,937,250 possible plugboard combinations
 
 3,163,680 * 150,738,274,937,250 = 476,887,665,653,479,080,000 Total possible combinations on this Enigma Machine
-`
+
 
 Rather than having to encode 1 letter at a time like the original machine, you input your initial settings, type to full message out, and the machine spits out the processed message. Using the same settings as when you encoded a message, you can decrypt a message in the same way
 
