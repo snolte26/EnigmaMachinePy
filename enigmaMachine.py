@@ -1,4 +1,6 @@
 import os
+import time
+from termcolor import colored
 
 
 def machine():
@@ -61,7 +63,9 @@ def machine():
             continue
         else:
             # WRITE ROTOR AND REFLECTOR SETTINGS TO THE FILE
-            settings.writelines("Rotors: " + (str(rotorChoice1 + 1) + " - " + str(rotorSetting1)) + ", " + (str(rotorChoice2+ 1) + "- " + str(rotorSetting2)) + ", " + (str(rotorChoice3 + 1) + " - " + str(rotorSetting3)) + "\n")
+            settings.writelines("Rotors: " + (str(rotorChoice1 + 1) + "-" + str(rotorSetting1)) + ", " + (
+                        str(rotorChoice2 + 1) + "-" + str(rotorSetting2)) + ", " + (
+                                            str(rotorChoice3 + 1) + "-" + str(rotorSetting3)) + "\n")
             settings.writelines("Reflector: " + str(reflector + 1) + "\n")
 
             # SETTING THE ROTOR CHOICES
@@ -109,7 +113,7 @@ def machine():
                 break
             else:
                 continue
-    
+
     # WRITE THE PLUG BOARD TO THE FILE AND CLOSE THE FILE
     settings.writelines("Plug Board: " + str(plugList))
     settings.close()
@@ -128,6 +132,9 @@ def machine():
     rotor1Count = 0
     rotor2Count = 0
     rotor3Count = 0
+
+    keyboardList = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', '\n', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L',
+                    '\n', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', '\n']
 
     for item in messageList:
 
@@ -206,6 +213,7 @@ def machine():
 
         # INCREASE FIRST ROTOR COUNT BY 1
         rotor1Count += 1
+        print("     " + str(rotorChoice3[0]) + " " + str(rotorChoice2[0]) + " " + str(rotorChoice1[0]))
 
         # IF THE CURRENT LETTER IN THE MESSAGE HAS A PLUG PAIR, CHANGE THE LETTER TO THE PAIRED LETTER
         for i in range(len(plugList)):
@@ -223,7 +231,23 @@ def machine():
         # ADD THE ENCODED MESSAGE LETTER TO THE ENCODED MESSAGE LIST
         encodedList.append(itemLetter)
 
+        print()
+        keyboardList = "".join(keyboardList)
+        for i in range(len(keyboardList)):
+            if keyboardList[i] == itemLetter:
+                print(colored(keyboardList[i], 'blue', 'on_yellow'), end=" ")
+            else:
+                print(keyboardList[i], end=" ")
+        time.sleep(.2)
+        os.system('cls')
+
     # JOIN THE ENCODED MESSAGE LIST INTO 1 STRING
+    print("     " + str(rotorChoice3[0]) + " " + str(rotorChoice2[0]) + " " + str(rotorChoice1[0]))
+    print()
+    keyboardList = "".join(keyboardList)
+    for i in range(len(keyboardList)):
+        print(keyboardList[i], end=" ")
+    print()
     print("Message: " + "".join(encodedList))
 
 
