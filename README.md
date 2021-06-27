@@ -29,3 +29,5 @@ Download the dist folder to begin using the machine
 The Enigma Machine now writes your settings to a file that can be called later. Users no longer have to write down their settings manually.
 
 Pucntuation and spaces are removed from the original message, to throw off any code-breaking by grammar conventions. Numbers are not encoded like the rest of the message, do NOT use numbers expecting things to go smoothly
+
+EnigmaMachinePY now has a user interface! Just run EnigmaMachineGUI to use the interface. Interface uses Tkinter, and allso you to change settings easily in your machine and outputs the message in the console
