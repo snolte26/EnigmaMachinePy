@@ -5,7 +5,7 @@ import tkinter as tk
 from tkinter import *
 from tkinter import ttk
 
-# from tkinter.messagebox import showinfo
+from tkinter.messagebox import showinfo
 # from termcolor import colored
 
 root = tk.Tk()
