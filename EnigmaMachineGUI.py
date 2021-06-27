@@ -226,6 +226,10 @@ def machine():
     print()
     '''
     print("Message: " + "".join(encodedList))
+    showinfo(
+        title='Message',
+        message="Message: " + "".join(encodedList)
+    )
 
 
 selected_rotor1 = tk.StringVar()
