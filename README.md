@@ -31,3 +31,16 @@ The Enigma Machine now writes your settings to a file that can be called later. 
 Pucntuation and spaces are removed from the original message, to throw off any code-breaking by grammar conventions. Numbers are not encoded like the rest of the message, do NOT use numbers expecting things to go smoothly
 
 EnigmaMachinePY now has a user interface! Just run EnigmaMachineGUI to use the interface. Interface uses Tkinter, and allso you to change settings easily in your machine and outputs the message in the console
+
+## Authors
+
+* **Alexander Nolte** - *Initial work* - [snolte26](https://github.com/snolte26)
+
+## Acknowledgments
+
+* Hat tip to anyone whose code was used
+### Inspiration:
+[Code Bullet](https://www.youtube.com/channel/UC0e3QhIYukixgh5VVpKHH9Q) Made a decent video on his creation, wanted to take a stab at it, so here we are
+
+### Hat tip:
+[Purple Booth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2) I stole this template from them
