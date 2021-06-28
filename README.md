@@ -8,10 +8,9 @@ https://en.wikipedia.org/wiki/Enigma_machine
 
 The enigmaMachine.py has multiple possible combinations of settings for writing a message. Users can pick 3 rotors out of 5, 1 reflector out of 3, 1 of 26 starting positions for each rotor, and create 10 pairs of letters much like on the plugboard of an actual Enigma Machine.
 
+## Math:
+
 The resulting amount of possible settings combinations calculates out to 476,887,665,653,479,080,000, or about 477 Quintillion
-
-Math:
-
 
 (5 * 4 * 3) (26^3) (3) = 3,163,680 possible rotor/reflector combinations
 
@@ -19,7 +18,7 @@ Math:
 
 3,163,680 * 150,738,274,937,250 = 476,887,665,653,479,080,000 Total possible combinations on this Enigma Machine
 
-
+## Updates
 Rather than having to encode 1 letter at a time like the original machine, you input your initial settings, type to full message out, and the machine spits out the processed message. Using the same settings as when you encoded a message, you can decrypt a message in the same way
 
 When setting the rotors and plug board, all settings are hidden so that no one can peep over your shoulder and see the settings, and the same thing goes for the initial message.
