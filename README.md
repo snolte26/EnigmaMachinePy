@@ -38,7 +38,6 @@ EnigmaMachinePY now has a user interface! Just run EnigmaMachineGUI to use the i
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
 ### Inspiration:
 [Code Bullet](https://www.youtube.com/channel/UC0e3QhIYukixgh5VVpKHH9Q) Made a decent video on his creation, wanted to take a stab at it, so here we are
 
