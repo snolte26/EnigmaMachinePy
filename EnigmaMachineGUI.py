@@ -13,6 +13,7 @@ root.geometry('900x550')
 root.resizable(True, True)
 root.title('Enigma Machine')
 root.minsize(900, 550)
+root.maxsize(900, 550)
 root.rowconfigure(2, weight=4)
 
 rotorDisplay = ttk.Label(root, text="", font=("Helvetica", 14))
